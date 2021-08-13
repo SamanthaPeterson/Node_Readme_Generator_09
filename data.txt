@@ -1,0 +1,7 @@
+{
+	"fullName": "S",
+	"communication": "phone",
+	"languages": [
+		"English"
+	]
+}

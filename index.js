@@ -1,3 +1,4 @@
+//Access to the local file system
 const fs = require('fs');
 
 // Install the `inquirer` dependency HERE
@@ -17,7 +18,7 @@ inquirer
         {
             type: "list",
             name: "communication",
-            message: "Click one",
+            message: "select one",
             choices: ['phone', 'computer', 'text']
         },
 
@@ -53,9 +54,11 @@ inquirer
 
     ])
     .then((answers) => {
-        console.log(answers)
+        // console.log(answers)
+        happy(answers)
     })
     .catch((error) => {
+        console.log(error)
         if (error.isTtyError) {
             // Prompt couldn't be rendered in the current environment
         } else {
@@ -66,12 +69,13 @@ inquirer
 
 // Write the user response to a file by chaining the below callback method to the prompt above.
 function happy(data) {
-
+console.log(data)
     // Bonus: Generate the name of your user file from their input
     // Your bonus code here
     //
+    var fileName = "data.txt"
 
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), function (err) {
+    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function (err) {
 
         if (err) {
             return console.log(err);
