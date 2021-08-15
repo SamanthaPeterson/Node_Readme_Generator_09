@@ -48,7 +48,6 @@ inquirer
         },
 
 
-
     ])
     .then((answers) => {
         // console.log(answers)
@@ -63,12 +62,11 @@ inquirer
         }
     });
 
-
 // Write the user response to a file by chaining the below callback method to the prompt above.
 function happy(data) {
-console.log(data)
+    console.log(data)
+
     // Generate the name of your user file from their input
-    
     var fileName = "data.txt"
 
     fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function (err) {
