@@ -8,11 +8,11 @@
 [Testing](#testing)
 [Questions](#questions)
 ## Description 
-Project Description
+Description
 ## Installation 
-Node website npm website
+explanation of install would go here https://youtu.be/FY1miIUxYdI 
 ## Usage
-Instructions and examples here
+instructions and use of project
 ## License
 mit
 ## Contributing

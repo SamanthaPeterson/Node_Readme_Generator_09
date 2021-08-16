@@ -231,3 +231,5 @@ init();
 //https://gajus.medium.com/handling-unhandled-promise-rejections-in-async-functions-35acfd1f2f57
 //https: //www.npmjs.com/package/pretty-error
 //https: //www.npmjs.com/package/inquirer
+
+//Watch the howto video here https://youtu.be/FY1miIUxYdI 
