@@ -1,4 +1,4 @@
-# dfj
+# Readme Generator 
 ##Table of Contents 
 [Description](#description)
 [Installation](#installation)
@@ -10,15 +10,14 @@
 ## Description 
 dsfs
 ## Installation 
-ghf
+See node documentation
 ## Usage
-dfh
+Made to be used in node and provide a helpful generating tool for creating readmes
 ## License
-afl-3.0
+Licenses if you have them will be shown here
 ## Contributing
-undefined
+Feel free to contribute to the project
 ## Testing
-undefined
+Testing is run in the app to help produce the most user friendly experience 
 ## Questions 
-(undefined)
-dfg
+Questions? Concerns? email photographer.samantha@live.com
