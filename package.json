@@ -1,36 +1,14 @@
 {
- "name": "Node_Readme_Generator_09",
+  "name": "project",
   "version": "1.0.0",
-  "description": "Node_Readme_Generator_09",
-  "main": "index.js"
-},
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-"repository": {
-  "type": "git",
-  "url": "git+https://github.com/SamanthaPeterson/Node_Readme_Generator_09.git"
-},
-"keywords": [],
-"author": "",
-"license": "ISC",
-"bugs": {
-  "url": "https://github.com/SamanthaPeterson/Node_Readme_Generator_09/issues"
-},
-"homepage": "https://github.com/SamanthaPeterson/Node_Readme_Generator_09#readme",
-"dependencies": {
-  "axios": "^0.21.1",
-  "inquirer": "^8.1.2",
-  "utils": "^0.3.1"
-}
-
-  "name": "Node Readme Generator 09",
-  "version": "1.0.0",
-  "description": "Node_Readme_Generator_09",
-  "main": "index.js"
-},
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node ./test/sample.js",
+    "start": "node app.js"
 },
 "repository": {
   "type": "git",
