@@ -20,7 +20,7 @@ try {
 
 //const path = require('path');
 
-const generateMarkdown = require('./utils/generateMarkdown.js')
+//const generateMarkdownb = require('./utils/generateMarkdown.js')
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -28,7 +28,7 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+// module.exports = generateMarkdownb;
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -306,24 +306,24 @@ ${input.email}`
         // writing files
 
 
-router.get('/', function (req, res, next) {
-    var pageToken = null;
-    drive.files.list({
-        q: "mimeType='image/jpeg'",
-        fields: 'nextPageToken, files(id, name)',
-        spaces: 'drive',
-        pageToken: pageToken
-    }).then(response => {
-        let files = response.data.files;
-        files.forEach(file => console.log('Found file: ', file.name, file.id))
-        res.render('index', {
-            title: 'Express'
-        });
-    }).catch(err => {
-        console.log(err);
-        res.sendStatus(500);
-    });
-});
+// router.get('/', function (req, res, next) {
+//     var pageToken = null;
+//     drive.files.list({
+//         q: "mimeType='image/jpeg'",
+//         fields: 'nextPageToken, files(id, name)',
+//         spaces: 'drive',
+//         pageToken: pageToken
+//     }).then(response => {
+//         let files = response.data.files;
+//         files.forEach(file => console.log('Found file: ', file.name, file.id))
+//         res.render('index', {
+//             title: 'Express'
+//         });
+//     }).catch(err => {
+//         console.log(err);
+//         res.sendStatus(500);
+//     });
+// });
 
 
         // TODO: Create a function to initialize app
@@ -342,35 +342,35 @@ function init() {
   init();
 
 
-// Function call to initialize app
-init();
-        // function to initialize program
-        async function init() {
-            // https://www.w3schools.com/js/js_errors.asp
-            try {
-                // Reference inquirer array with prompts
-                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
-                // https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
-                const userResponses = await inquirer.prompt(questions);
-                console.log("Your responses: ", userResponses);
-                console.log("Your responses have been logged. Calling to GitHub...");
+// // Function call to initialize app
+// init();
+//         // function to initialize program
+//         async function init() {
+//             // https://www.w3schools.com/js/js_errors.asp
+//             try {
+//                 // Reference inquirer array with prompts
+//                 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+//                 // https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
+//                 const userResponses = await inquirer.prompt(questions);
+//                 console.log("Your responses: ", userResponses);
+//                 console.log("Your responses have been logged. Calling to GitHub...");
 
-                // Referencing API.js
-                const userInfo = await api.getUser(userResponses);
-                console.log("Your GitHub user info: ", userInfo);
+//                 // Referencing API.js
+//                 const userInfo = await api.getUser(userResponses);
+//                 console.log("Your GitHub user info: ", userInfo);
 
-                // Pass inquirer data and api data to markdown
-                console.log("Generating your markdown")
-                const markdown = generateMarkdown(userResponses, userInfo);
-                console.log(markdown);
+//                 // Pass inquirer data and api data to markdown
+//                 console.log("Generating your markdown")
+//                 const markdown = generateMarkdown(userResponses, userInfo);
+//                 console.log(markdown);
 
-                // Write markdown
-                await writeFileAsync('ExampleREADME.md', markdown);
+//                 // Write markdown
+//                 await writeFileAsync('ExampleREADME.md', markdown);
 
-            } catch (error) {
-                console.log(error);
-            }
-        };
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         };
 
 //WHEN I choose a license for my application from a list of options
 //THEN a badge for that license is added near the top of the README 
