@@ -8,13 +8,13 @@
 [Testing](#testing)
 [Questions](#questions)
 ## Description 
-Profesional Readme generator using node
+Project Description
 ## Installation 
-NMP and
+Node website npm website
 ## Usage
-See the walk through video 
+Instructions and examples here
 ## License
-afl-3.0
+mit
 ## Contributing
 undefined
 ## Testing
