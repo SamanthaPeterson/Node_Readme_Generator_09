@@ -5,6 +5,18 @@ const fs = require('fs');
 // Install the `inquirer` dependency HERE
 const inquirer = require('inquirer')
 
+var PrettyError = require('pretty-error');
+var pe = new PrettyError();
+
+var renderedError = pe.render(new Error('Some error message'));
+console.log(renderedError);
+
+try {
+    doSomethingThatThrowsAnError();
+} catch (error) {
+    console.log(pe.render(error));
+}
+
 
 //const path = require('path');
 
@@ -294,7 +306,24 @@ ${input.email}`
         // writing files
 
 
-
+router.get('/', function (req, res, next) {
+    var pageToken = null;
+    drive.files.list({
+        q: "mimeType='image/jpeg'",
+        fields: 'nextPageToken, files(id, name)',
+        spaces: 'drive',
+        pageToken: pageToken
+    }).then(response => {
+        let files = response.data.files;
+        files.forEach(file => console.log('Found file: ', file.name, file.id))
+        res.render('index', {
+            title: 'Express'
+        });
+    }).catch(err => {
+        console.log(err);
+        res.sendStatus(500);
+    });
+});
 
 
         // TODO: Create a function to initialize app
