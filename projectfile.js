@@ -6,11 +6,17 @@ const fs = require('fs');
 const inquirer = require('inquirer')
 
 
-const path = require('path');
+//const path = require('path');
 
-//const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+    return `# ${data.title}
+`;
+}
 
+module.exports = generateMarkdown;
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -40,13 +46,7 @@ function renderLicenseSection(license) {}
 
 
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-    return `# ${data.title}
-`;
-}
 
-module.exports = generateMarkdown;
 
 
 
