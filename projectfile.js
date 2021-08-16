@@ -1,56 +1,37 @@
-// TODO: Include packages needed for this application
+//to run program in terminal run the command node projectfile.js 
+
+// Include packages needed for this application
 //Access to the local file system
 const fs = require('fs');
 
 // Install the `inquirer` dependency HERE
+//npm i inquirer to install
 const inquirer = require('inquirer')
 
+//I used pretty error to very clearly show when i had errors in my code to try and debug
 var PrettyError = require('pretty-error');
 var pe = new PrettyError();
 
-// var renderedError = pe.render(new Error('Some error message'));
-// console.log(renderedError);
 
-// try {
-//     doSomethingThatThrowsAnError();
-// } catch (error) {
-//     console.log(pe.render(error));
-// }
-
-
-//const path = require('path');
-
-//const generateMarkdownb = require('./utils/generateMarkdown.js')
-
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.title}
 `;
 }
 
-// module.exports = generateMarkdownb;
 
-
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { }
 
-
-
-// TODO: Create a function that returns the license link
+//  Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { }
 
 
-
-
-
-// TODO: Create a function that returns the license section of README
+//  Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) { }
-
-
-
 
 
 
@@ -66,7 +47,7 @@ const questions = [{
     type: 'input',
     name: 'username',
     message: 'Enter your GitHub username.',
-    // We need to validate that user entered at least one word
+    // validate that user entered at least one word
     // https://stackoverflow.com/questions/57321266/how-to-test-inquirer-validation
     validate: function (answer) {
         if (answer.length < 1) {
@@ -97,7 +78,6 @@ const questions = [{
 },
 
 
-
 //WHEN I enter my project title
 //THEN this is displayed as the title of the README
 // Title of Project
@@ -105,7 +85,7 @@ const questions = [{
     type: 'input',
     name: 'title',
     message: 'Enter the title of your project.',
-    // We need to validate that user entered at least one word
+    // validate that user entered at least one word
     validate: function (answer) {
         if (answer.length < 1) {
             return console.log("You must enter the title of your project.");
@@ -113,13 +93,6 @@ const questions = [{
         return true;
     }
 },
-
-
-
-//WHEN I click on the links in the Table of Contents
-//THEN I am taken to the corresponding section of the README
-
-
 
 
 //WHEN I enter a description, installation instructions, usage information, 
@@ -167,22 +140,20 @@ const questions = [{
     type: 'input',
     name: 'contributing',
     message: 'Explain how users can contribute to your project (if necessary).',
-    // Validation not required if question is optional
+    // Validation not required if q is optional
 },
 // Test for project
 {
     type: 'input',
     name: 'tests',
     message: 'Provide tests for project, and explain how to test (if necessary).',
-    // Validation not required if question is optional
+    // Validation not required if q is optional
 },
 
 
 //WHEN I enter my email address
 //THEN this is added to the section of the README entitled Questions, 
 //with instructions on how to reach me with additional questions
-
-
 {
     type: 'input',
     name: 'email',
@@ -192,8 +163,7 @@ const questions = [{
 ];
 
 
-
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(input) {
     var readMeText = `# ${input.title}
 ##Table of Contents 
@@ -220,22 +190,19 @@ ${input.test}
 (${input.github})
 ${input.email}`
 
-  //  console.log(readMeText)
 
+//https://nodejs.dev/learn/writing-files-with-nodejs refrenced documentation 
 
-fs.writeFile('./test.md', readMeText, err => {
+fs.writeFile('./readme.md', readMeText, err => {
     if (err) {
         console.error(err)
         return
     }
-    //file written successfully
+    //file written -ok
 })
 }
 
 
-
-
-// TODO: Create a function to initialize app
 // Reference: https://www.npmjs.com/package/util.promisify
 // TODO: Create a function to initialize app
 function init() {
@@ -251,11 +218,16 @@ function init() {
 init();
 
 
-// // Function call to initialize app
+//WHEN I click on the links in the Table of Contents
+//THEN I am taken to the corresponding section of the README
 
-//WHEN I choose a license for my application from a list of options
-//THEN a badge for that license is added near the top of the README 
-//and a notice is added to the section of the README entitled License 
-//that explains which license the application is covered under
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+//Used for Reference 
+//https://www.npmjs.com/ NPM 
+//https://nodejs.dev/learn/writing-files-with-nodejs Writing files with Node.js
+//https: //stackoverflow.com/questions/60250759/nodejs-how-to-deal-with-unhandledpromiserejectionwarning FOR error handling 
+//https://github.com/coding-boot-camp/potential-enigma/blob/main/readme-guide.md
+//https://github.com/coding-boot-camp/Professional-README-Generator/blob/main/utils/generateMarkdown.js
+//https://gajus.medium.com/handling-unhandled-promise-rejections-in-async-functions-35acfd1f2f57
+//https: //www.npmjs.com/package/pretty-error
+//https: //www.npmjs.com/package/inquirer
