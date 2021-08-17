@@ -8,7 +8,7 @@
 [Testing](#testing)
 [Questions](#questions)
 ## Description 
-Project Description
+Project Description This project was designed and created to make a professional generator using Node js. Implementing this project as a part of your GitHub repos will help to provide consistent and cohesive read me files. My hope is that this project will be fairly user friendly so that the user can easily answer prompts or questions in the integrated terminal.  
 ## Installation 
 Node website npm website
 ## Usage
@@ -23,4 +23,4 @@ undefined
 (undefined)
 photographer.samantha@live.com
 Screen Shot 2021-08-15 at 10.51.36 PM.png
-Screen Shot 2021-08-15 at 10.51.36 PM.png
+
