@@ -10,7 +10,7 @@
 ## Description 
 Project Description This project was designed and created to make a professional generator using Node js. Implementing this project as a part of your GitHub repos will help to provide consistent and cohesive read me files. My hope is that this project will be fairly user friendly so that the user can easily answer prompts or questions in the integrated terminal.  
 ## Installation 
-Node website npm website
+Requirements for this project: Node, inquirer, Pretty error. Visit the npm website as well as the node website. 
 ## Usage
 Instructions and examples here https://youtu.be/FY1miIUxYdI 
 ## License
