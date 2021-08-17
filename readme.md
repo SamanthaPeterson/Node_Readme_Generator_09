@@ -8,11 +8,11 @@
 [Testing](#testing)
 [Questions](#questions)
 ## Description 
-Description zebra cat
+I will place a description here 
 ## Installation 
-Node, inquirer, and pretty error are required to run this program. 
+Explanation of install
 ## Usage
-Video https://youtu.be/bnHWlMHp9Gw  instructions and use of project
+Instructions and examples here
 ## License
 mit
 ## Contributing
@@ -20,4 +20,5 @@ undefined
 ## Testing
 undefined
 ## Questions 
-For questions or concerns please email photographer.samantha@live.com
+(undefined)
+Photographer.samantha@live.com
